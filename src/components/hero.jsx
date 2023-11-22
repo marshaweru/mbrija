@@ -2,7 +2,7 @@ import { logo } from '../assets';
 
 const hero = () => {
   return (
-    <header className="w-full flex justify-center items-center flex-col">
+    <head className="w-full flex justify-center items-center flex-col">
         <nav className="flex justify-between items-center w-full mb-10 pt-3">
             <img src={logo} alt="sumz_logo" className="w-28 object-contain" />
 
@@ -10,7 +10,10 @@ const hero = () => {
                 Github
             </button>
         </nav>
-    </header>
+        <h1 className="head_text">Condense Articles With <br /><span>OpenAI GPT-3.5</span>
+        </h1>
+        <h2 className="desc">An Open-Source article condenser that changes long articles into succinct and clear reviews. </h2>
+    </head>
   )
 }
 
