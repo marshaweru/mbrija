@@ -1,8 +1,12 @@
-import React from 'react'
+import Hero from './components/Hero';
+import Demo from './components/Demo';
 
+import './app.css';
 const app = () => {
   return (
-    <div>app</div>
+    <main>
+
+    </main>
   )
 }
 
