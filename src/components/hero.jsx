@@ -2,7 +2,9 @@ import { logo } from '../assets';
 
 const hero = () => {
   return (
-    <div>hero</div>
+    <header className="w-full flex justify-center items-center flex-col">
+
+    </header>
   )
 }
 
