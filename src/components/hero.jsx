@@ -10,7 +10,7 @@ const hero = () => {
                 Github
             </button>
         </nav>
-        <h1 className="head_text">Condense Articles With <br /><span>OpenAI GPT-3.5</span>
+        <h1 className="head_text">Condense Articles With <br className="max-md:hidden" /><span className="blue_gradient">OpenAI GPT-3.5</span>
         </h1>
         <h2 className="desc">An Open-Source article condenser that changes long articles into succinct and clear reviews. </h2>
     </head>
