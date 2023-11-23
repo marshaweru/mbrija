@@ -26,7 +26,7 @@ try {
 export const articleApi = createApi({
     reducerPath: 'articleApi',
     baseQuery: fetchBaseQuery({
-        baseUrl: ''
+        baseUrl: 'https://article-extractor-and-summarizer.p.rapidapi.com/'
     })
     endpoints: (builder) => ({
         getSummary: builder.query({
