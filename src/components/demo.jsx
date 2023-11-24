@@ -6,6 +6,8 @@ import { useLazyGetSummaryQuery } from '../services/article';
 const demo = () => {
   const [article, setArticle] = useState({url: '', summary: '',
 });
+  const
+  
 
 const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery();
 
