@@ -4,9 +4,12 @@ import { copy, linkIcon, loader, tick } from '../assets';
 import { useLazyGetSummaryQuery } from '../services/article';
 
 const demo = () => {
-  const [article, setArticle] = useState({url: '', summary: '',});
+  const [article, setArticle] = useState({url: '', summary: '',
+});
 
-  const handleSubmit = async (e) => {
+const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery();
+
+const handleSubmit = async (e) => {
     alert('Submitted');
   }
 
