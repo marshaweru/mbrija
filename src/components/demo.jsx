@@ -6,18 +6,20 @@ import { useLazyGetSummaryQuery } from '../services/article';
 const demo = () => {
   const [article, setArticle] = useState({url: '', summary: '',
 });
-  const
+  const [allArticles, setAllArticles] = useState([]);
   
 
 const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery();
 
 const handleSubmit = async (e) => { e.preventDefault();
-  const ( data ) = await getSummary({ articleurl: article.url });
+  const { data } = await getSummary({ articleurl: article.url });
 
   if (data?.summary) {
     const newArticle = { ...article, summary: data.summary };
+    const upDatedAllArticles = [newArticle, ...allArticles];
 
     setArticle(newArticle);
+    setAllArticles(upDatedAllArticles);
   }
 }
 
