@@ -7,6 +7,8 @@ const demo = () => {
   const [article, setArticle] = useState({url: '', summary: '',
 });
   const [allArticles, setAllArticles] = useState([]);
+
+  useEffect
   
 
 const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery();
