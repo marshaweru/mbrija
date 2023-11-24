@@ -12,8 +12,12 @@ const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery();
 const handleSubmit = async (e) => {
   const ( data ) = await getSummary({ articleurl: article.url });
 
-  if (data)
+  if (data?.summary) {
+    const newArticle = { ...article, summary: data.summary };
+
+    setArticle(newArticle);
   }
+}
 
   return (
     <section className="mt-16 w-full max-w-xl">
