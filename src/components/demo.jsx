@@ -7,6 +7,9 @@ const demo = () => {
   const [article, setArticle] = useState({url: '', summary: '',
 });
   const [allArticles, setAllArticles] = useState([]);
+  const [copied, setCopied] =useState("");
+
+  const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery();
 
   useEffect(() => {
     const articlesFromLocalStorage = JSON.parse(
@@ -34,7 +37,10 @@ const handleSubmit = async (e) => { e.preventDefault();
   }
 }
 
-const handle
+const handleCopy = (copyUrl) => {
+  setCopied(copyUrl);
+  navigator.clipboard.writeText(copyUrl);
+}
 
   return (
     <section className="mt-16 w-full max-w-xl">
