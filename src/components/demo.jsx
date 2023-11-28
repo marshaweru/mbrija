@@ -8,8 +8,15 @@ const demo = () => {
 });
   const [allArticles, setAllArticles] = useState([]);
 
-  useEffect
-  
+  useEffect(() => {
+    const articlesFromLocalStorage = JSON.parse(
+      localStorage.getItem('articles')
+    )
+
+    if(articlesFromLocalStorage) {
+      setAllArticles(articlesFromLocalStorage)
+    }
+  }, []);
 
 const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery();
 
@@ -22,6 +29,8 @@ const handleSubmit = async (e) => { e.preventDefault();
 
     setArticle(newArticle);
     setAllArticles(upDatedAllArticles);
+
+    localStorage.setItem('articles', JSON.stringify(upDatedAllArticles))
   }
 }
 
@@ -38,8 +47,30 @@ const handleSubmit = async (e) => { e.preventDefault();
           <button type="submit" className="submit_btn peer-focus:border-gray-700 peer-focus:text-gray-700">
           </button>
         </form>
-      </div>
+        <div className="flex flex-col gap-1 max-h-60 overflow-y-auto">{allArticles.map((item, index) => {
+          <div key={`link-${index}`}onClick={() => setArticle(item)} className="link_card">
+            <div className="copy_btn">
+              <img src={copy} alt="copy_icon" className="w-[40%] h-[40%] object-contain"/>
+            </div>
+            <p className="flex-1 font-satoshi text-blue-700 font-medium text-sm truncate">{item.url}</p>
+          </div>
+        })}
 
+        </div>
+      </div>
+      <div className="my-10 max-w-full flex justify-center items-center">
+        {isFetching ? (
+          <img src={loader} alt="loader" className="w-20 h-20 object-contain" />
+        ) : error ? (
+          <p className="font-inter font-bold text-black text-center">Weeeelll, that wasn't meant to happen...<br />
+          <span className="font-satoshi font-normal text-blue-600">
+            {error?.data?.error}
+          </span>
+          </p> 
+        ) : (
+          article.summary &&
+        )}
+      </div>
     </section>
   )
 }
