@@ -40,6 +40,7 @@ const handleSubmit = async (e) => { e.preventDefault();
 const handleCopy = (copyUrl) => {
   setCopied(copyUrl);
   navigator.clipboard.writeText(copyUrl);
+  
 }
 
   return (
