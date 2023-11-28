@@ -7,7 +7,6 @@ const demo = () => {
   const [article, setArticle] = useState({url: '', summary: '',
 });
   const [allArticles, setAllArticles] = useState([]);
-  const [copied, setCopied] =useState("");
 
   const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery();
 
@@ -20,8 +19,6 @@ const demo = () => {
       setAllArticles(articlesFromLocalStorage)
     }
   }, []);
-
-const [getSummary, { error, isFetching }] = useLazyGetSummaryQuery();
 
 const handleSubmit = async (e) => { e.preventDefault();
   const { data } = await getSummary({ articleurl: article.url });
