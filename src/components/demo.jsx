@@ -34,6 +34,8 @@ const handleSubmit = async (e) => { e.preventDefault();
   }
 }
 
+const handle
+
   return (
     <section className="mt-16 w-full max-w-xl">
       {/*search*/}
