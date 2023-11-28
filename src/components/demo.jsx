@@ -73,8 +73,8 @@ const handleSubmit = async (e) => { e.preventDefault();
               <h2 className="font-satoshi font-bold text-gray-600 text-xl">Article <span className="red_gradient">
               </span>
               </h2>
-              <div>
-                
+              <div className="summary_box">
+                <p>{article.summary}</p>
               </div>
             </div>
           )
