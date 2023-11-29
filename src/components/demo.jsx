@@ -13,7 +13,7 @@ const demo = () => {
 
   useEffect(() => {
     const articlesFromLocalStorage = JSON.parse(
-      localStorage.getItem('articles')
+      localStorage.getItem("articles")
     )
 
     if (articlesFromLocalStorage) {
