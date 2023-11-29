@@ -45,7 +45,7 @@ const handleCopy = (copyUrl) => {
   setCopied(copyUrl);
   navigator.clipboard.writeText(copyUrl);
   setTimeout(() => setCopied(false), 5000);
-}
+};
 
   return (
     <section className="mt-16 w-full max-w-xl">
