@@ -79,11 +79,13 @@ const handleKeyDown = (e) => {
 
           <button 
             type='submit' 
-            className="submit_btn peer-focus:border-gray-700 peer-focus:text-gray-700">
+            className='submit_btn peer-focus:border-gray-700 peer-focus:text-gray-700'
+          >
 
           </button>
         </form>
         
+        {/*Browse history*/}
         <div className="flex flex-col gap-1 max-h-60 overflow-y-auto">{allArticles.map((item, index) => (
           <div key={`link-${index}`}onClick={() => setArticle(item)} className="link_card">
             <div className="copy_btn" onClick={() =>
