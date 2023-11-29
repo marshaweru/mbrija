@@ -69,7 +69,13 @@ const handleKeyDown = (e) => {
 
           <input 
             type='url' 
-            placeholder='Enter a URL' value={article.url} onChange={(e) => setArticle({ ...article, url: e.target.value })} required className="url_input peer"/>
+            placeholder='Enter a URL' 
+            value={article.url} 
+            onChange={(e) => setArticle({ ...article, url: e.target.value })} 
+            onKeyDown={handleKeyDown}
+            required 
+            className="url_input peer"
+          />
 
           <button type="submit" className="submit_btn peer-focus:border-gray-700 peer-focus:text-gray-700">
 
