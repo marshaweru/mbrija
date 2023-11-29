@@ -77,7 +77,8 @@ const handleKeyDown = (e) => {
             className='url_input peer' // mark the sibling with the peer class, and use peer-* modifiers to style the target element, When you need to style an element based on the state of a sibling element
           />
 
-          <button type="submit" className="submit_btn peer-focus:border-gray-700 peer-focus:text-gray-700">
+          <button 
+            type="submit" className="submit_btn peer-focus:border-gray-700 peer-focus:text-gray-700">
 
           </button>
         </form>
