@@ -40,7 +40,7 @@ const { data } = await getSummary({ articleUrl: article.url });
     localStorage.setItem('articles', JSON.stringify(updatedAllArticles));
   }
 };
-//toggle ico for user feedback and copy url
+//toggle icon for user feedback and copy url
 const handleCopy = (copyUrl) => {
   setCopied(copyUrl);
   navigator.clipboard.writeText(copyUrl);
