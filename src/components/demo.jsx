@@ -17,7 +17,7 @@ const demo = () => {
     );
 
     if (articlesFromLocalStorage) {
-      setAllArticles(articlesFromLocalStorage)
+      setAllArticles(articlesFromLocalStorage);
     }
   }, []);
 
