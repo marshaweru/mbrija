@@ -134,4 +134,4 @@ const handleKeyDown = (e) => {
   )
 }
 
-export default demo
+export default demo;
