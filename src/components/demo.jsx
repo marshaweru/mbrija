@@ -47,6 +47,12 @@ const handleCopy = (copyUrl) => {
   setTimeout(() => setCopied(false), 5000);
 };
 
+const handleKeyDown = (e) => {
+  if (e.keyCode === 13) {
+    handleSubmit(e);
+  }
+};
+
   return (
     <section className="mt-16 w-full max-w-xl">
       {/*search*/}
