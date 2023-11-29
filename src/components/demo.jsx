@@ -88,7 +88,11 @@ const handleKeyDown = (e) => {
         {/*Browse history*/}
         <div className='flex flex-col gap-1 max-h-60 overflow-y-auto'>
           {allArticles.reverse((item, index) => (
-          <div key={`link-${index}`}onClick={() => setArticle(item)} className="link_card">
+          <div 
+            key={`link-${index}`}
+            onClick={() => setArticle(item)} 
+            className='link_card'
+          >
             <div className="copy_btn" onClick={() =>
             handleCopy(item.url)}>
               <img src={copied === item.url ? tick : copy} alt="copy_icon" className="w-[40%] h-[40%] object-contain"/>
