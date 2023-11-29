@@ -32,11 +32,12 @@ const { data } = await getSummary({ articleUrl: article.url });
   if (data?.summary) {
     const newArticle = { ...article, summary: data.summary };
     const upDatedAllArticles = [newArticle, ...allArticles];
+
 //update state and local storage
     setArticle(newArticle);
     setAllArticles(upDatedAllArticles);
 
-    localStorage.setItem('articles', JSON.stringify(upDatedAllArticles));
+    localStorage.setItem('articles', JSON.stringify(updatedAllArticles));
   }
 }
 const handleCopy = (copyUrl) => {
