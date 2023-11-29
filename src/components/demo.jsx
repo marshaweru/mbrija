@@ -86,7 +86,7 @@ const handleKeyDown = (e) => {
         </form>
         
         {/*Browse history*/}
-        <div className="flex flex-col gap-1 max-h-60 overflow-y-auto">{allArticles.map((item, index) => (
+        <div className='flex flex-col gap-1 max-h-60 overflow-y-auto'>{allArticles.map((item, index) => (
           <div key={`link-${index}`}onClick={() => setArticle(item)} className="link_card">
             <div className="copy_btn" onClick={() =>
             handleCopy(item.url)}>
