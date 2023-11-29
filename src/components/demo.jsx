@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 import { copy, linkIcon, loader, tick } from "../assets";
-import { useLazyGetSummaryQuery } from '../services/article';
+import { useLazyGetSummaryQuery } from "../services/article";
 
 const demo = () => {
   const [article, setArticle] = useState({url: '', summary: '',
